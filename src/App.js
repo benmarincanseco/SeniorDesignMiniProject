@@ -12,7 +12,7 @@ function App() {
         <Text style={styles.title}>Welcome to React Native for Web</Text>
       </View>
       <Text style={styles.text}>
-        This starter project enables you to build web application using React Native module. .
+        This starter project enables you to build web application using React Native module.
       </Text>
       <Text style={styles.text}>
         Built with <Link href="https://github.com/facebook/create-react-app">Create React App</Link> and{' '}
