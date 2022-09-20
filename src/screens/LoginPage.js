@@ -15,8 +15,12 @@ const LoginPage = () => {
     <View style={styles.container}>
       
       <View style={styles.header}>
-        <Text style={styles.title}>Welcome to Twitter Bot Checker!</Text>
+        <Text style={styles.title}>Welcome to Twitter Bot Checker! </Text>
       </View>
+
+      <Text style={styles.text}>
+        This is a login page.
+      </Text> 
 
       <CustomInput 
         placeholder = "Email"
