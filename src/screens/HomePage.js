@@ -1,52 +1,39 @@
 import React, {useState} from 'react';
-import { Button, StyleSheet, Text, View, Dimensions } from 'react-native';
-import { signInWithGoogle } from '../Firebase';
+import { StyleSheet, Text, View, Dimensions } from 'react-native';
 
 import CustomInput from './components/CustomInput';
 import CustonButton from './components/CustomButton';
-import { useNavigation } from '@react-navigation/native';
 
 let ScreenHeight = Dimensions.get('window').height;
 let ScreenWidth = Dimensions.get('window').width;
 
-const LoginPage = () => {
+// Home page of Twitter Bot checker.
+const HomePage = () => {
 
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-
-  const navigation = useNavigation();
 
   const onLoginPress = () => {
     console.log("Login");
-    //Authentication first
-    //navigation.navigate('HomeScreen');
-    {signInWithGoogle()};
   }
 
   return (
     <View style={styles.container}>
       
       <View style={styles.header}>
-        <Text style={styles.title}>Welcome to Twitter Bot Checker! </Text>
+        <Text style={styles.title}>Welcome to Twitter Bot! </Text>
       </View>
 
       <Text style={styles.text}>
-        This is a login page.
+        This is a home page.
       </Text> 
 
       <CustomInput 
-        placeholder = "Email"
+        placeholder = "Twitter Tag"
         value = {email}
         setValue = {setEmail} 
       />
-      <CustomInput
-        placeholder = "Password"
-        value = {password}
-        setValue = {setPassword}
-        secureTextEntry = {true}
-      />
-      <CustonButton text = "Login" onPress = {onLoginPress}/>
-      <CustonButton text = "Sign in with Google" onPress = {onLoginPress}/>
+
+      <CustonButton text = "Check" onPress = {onLoginPress}/>
 
     </View>
   )
@@ -84,4 +71,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default LoginPage;
+export default HomePage;
