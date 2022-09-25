@@ -10,10 +10,10 @@ let ScreenWidth = Dimensions.get('window').width;
 // Home page of Twitter Bot checker.
 const HomePage = () => {
 
-  const [email, setEmail] = useState('');
+  const [twitterTag, setEmail] = useState('');
 
   const onLoginPress = () => {
-    console.log("Login");
+    console.log(twitterTag);
   }
 
   return (
@@ -29,7 +29,7 @@ const HomePage = () => {
 
       <CustomInput 
         placeholder = "Twitter Tag"
-        value = {email}
+        value = {twitterTag}
         setValue = {setEmail} 
       />
 

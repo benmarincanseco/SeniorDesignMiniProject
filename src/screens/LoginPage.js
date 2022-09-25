@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
-import { Button, StyleSheet, Text, View, Dimensions } from 'react-native';
-import { signInWithGoogle } from '../Firebase';
+import { StyleSheet, Text, View, Dimensions } from 'react-native';
+
 
 import CustomInput from './components/CustomInput';
 import CustonButton from './components/CustomButton';
 import { useNavigation } from '@react-navigation/native';
+import Firebase from '../screens/Firebase';
 
 let ScreenHeight = Dimensions.get('window').height;
 let ScreenWidth = Dimensions.get('window').width;
@@ -17,11 +18,10 @@ const LoginPage = () => {
   const navigation = useNavigation();
 
   const onLoginPress = () => {
-    console.log("Login");
-
-    navigation.navigate('HomeScreen');
-    // Authentication below
-    //{signInWithGoogle()};
+    Firebase.signIn()
+      console.log("Login");
+      navigation.navigate('HomeScreen');      
+      
   }
 
   return (
