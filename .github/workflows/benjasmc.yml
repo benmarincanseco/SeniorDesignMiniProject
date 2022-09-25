@@ -31,6 +31,8 @@ jobs:
         with:
         # this is regarding the matrix strategy specified above
           node-version: ${{ matrix.node-version }}
+      # Allow peer dependencies for React Native Navigation
+      - run: npm config set legacy-peer-deps true
       # install dependencies
       - run: npm ci
       # build the project if necessary
