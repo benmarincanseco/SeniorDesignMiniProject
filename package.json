@@ -23,6 +23,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "coverage": "react-scripts test --env=jsdom --watchAll=false --coverage",
+    "lint:js": "eslint src/**/*.js",
+    "lint": "npm run lint:js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
