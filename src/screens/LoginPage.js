@@ -18,9 +18,10 @@ const LoginPage = () => {
 
   const onLoginPress = () => {
     console.log("Login");
-    //Authentication first
-    //navigation.navigate('HomeScreen');
-    {signInWithGoogle()};
+
+    navigation.navigate('HomeScreen');
+    // Authentication below
+    //{signInWithGoogle()};
   }
 
   return (
