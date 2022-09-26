@@ -18,7 +18,7 @@ const LoginPage = () => {
   const navigation = useNavigation();
 
   const onLoginPress = () => {
-    Firebase.signIn()
+    //Firebase.signIn()
       console.log("Login");
       navigation.navigate('HomeScreen');      
       
